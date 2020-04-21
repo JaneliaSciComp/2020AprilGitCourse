@@ -25,8 +25,8 @@ This repository supports the "Source Control Using Git and GitHub" being taught 
 
 # Curriculum
 
-See this wiki page (not created yet).
+See [this wiki page](https://github.com/JaneliaSciComp/2020AprilGitCourse/wiki/Curriculum).
 
 # Resources
 
-See this wiki page (not created yet).
+See [this wiki page](https://github.com/JaneliaSciComp/2020AprilGitCourse/wiki/Resources).
