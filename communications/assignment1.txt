@@ -1,0 +1,22 @@
+Hello,
+
+The assignment for the week of April 27 is to do the first two sections of the Udemy course, "Getting Started with Git" and "Getting Started with GitHub".  These two sets of videos will walk you through installing git, signing up for GitHub, and doing some initial first git tasks.
+
+Notes on the first week's videos:
+- There are sections on using Mac, Windows, and Linux; you can skip the ones that you don't use (so that section will be shorter than advertised).
+- However, you should also be doing the same steps as the instructor as you watch, so that will probably take you more time than just watching the video.
+- If you know any git or GitHub, this week will go by very fast.
+- Note that your screen output may vary from the instructor's in some details.  This is especially true if you've used git before and have some non-default configurations.  I also noticed that my screen output was more wordy than his at several points.
+- If you have problems, first take a look at the Q&A for the lecture (choose the Q&A tab below video, set filter to "current lecture").
+    + For example, I had a problem in video 16 where my screen output didn't match his at all, and the solution appears in the Q&A.
+- But you can always ask for help on the Slack channel.
+
+Probable SciComp topics:
+- why use git on the command-line?
+- GUI git clients
+- git resources
+
+Remember to answer the initial questionnaire, especially the scheduling question, by Monday April 27 at noon!  Once the answers are in, I'll schedule the meetings and send out invitations and Zoom info.
+
+
+Don
