@@ -1,0 +1,19 @@
+​Source Control Using Git and GitHub
+
+Start date: Week of April 27
+Sign-up deadline: Friday, April 24 at noon
+
+Course description
+
+SciComp Software will be conducting an online course on source control software like Git and GitHub. The course will cover beginner through intermediate concepts. It will be fast-paced, requiring about four hours per week for about four weeks. If you have some familiarity with the topic, your time commitment will be lower.
+ 
+Each week, the course will consist of a combination of about two hours of on-demand Udemy video lectures (via HHMI's "Udemy for Business"), an hour of individual practice (following along with the videos), and a one hour interactive Zoom meeting conducted by SciComp (with supplemental lectures, demos, Q&A, etc.). Because Udemy will provide the core content on-demand, we will dynamically adjust the SciComp content of the course based on feedback from the participants. You can find the latest course information on GitHub​. 
+ 
+
+Sign-up information
+
+To sign up for the course please contact Don Olbris at olbrisd@janelia.hhmi.org by noon on Friday, April 24. After signups are underway, we will circulate a questionnaire asking about your previous Git/GitHub experience, what you want out of the course, and a survey to determine our Zoom meeting days. The first Udemy assignment will be sent out late Friday, April 24, and the first SciComp Zoom session will occur later in the week of April 27. 
+ 
+Suggestions for more course topics?
+
+This course is only the beginning,​ and SciComp would like to conduct other courses in software engineering, image processing, and related topics. If you have suggestions for subjects you'd like to see covered, please email Konrad Rokicki at rokickik@janelia.hhmi.org​​ or Stephan Preibisch at preibischs@janelia.hhmi.org.
