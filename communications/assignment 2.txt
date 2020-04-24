@@ -1,0 +1,14 @@
+Hello,
+
+For the week of May 4, we'll be working through sections 3 and 4 of the Udemy course.  Section 3 is called "Fork and Clone", but it would be better titled "More Git Basics".  Section 4 is about branching, which is a very powerful tool for keeping your work (a) organized, and (b) safe from unwanted changes.  I think section 4 is more difficult than the preceding three, so allow yourself time to work through it without rushing.
+
+
+
+
+
+
+
+
+
+
+
