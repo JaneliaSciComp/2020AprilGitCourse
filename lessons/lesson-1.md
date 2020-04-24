@@ -1,14 +1,10 @@
 # notes for lesson 1
 
-# outline
-- course intro
-- very short summary of Udemy sections 1&2, plus commentary
-- why use git on the command-line?
-- GUI git clients
-- general Q&A
-
-
-# intro
+# course intro
+- up-front honesty: there's going to be some rough edges
+    + we planned to do a course maybe later in the year
+    + rushed to put this together right now
+    + I'm about 2 weeks ahead in lessons, which affects how I order things
 - Zoom logistics; question moderator
 - information on GitHub, questions on Slack
 - the course is really fluid
