@@ -19,9 +19,11 @@ This repository supports the "Source Control Using Git and GitHub" being taught 
 | Friday, April 24, noon | signup deadline |
 | Friday, April 24, end of day | first Udemy assignment sent out |
 | Monday, April 27, noon | opening questionnaire due |
-| Wednesday? Thursday? April 29-30ish, afternoon (tentative) | first SciComp Zoom meeting |
-|    |    |
-|    | final questionnaire sent out |
+| Friday, May 1, 3:30 pm | first SciComp Zoom meeting (details sent by email): assignment 1 due; assignment 2 given |
+| Friday, May 8, 3:30 pm | SciComp Zoom meeting: assignment 2 due; assignment 3 given |
+| Friday, May 15, 3:30 pm | SciComp Zoom meeting: assignment 3 due; assignment 4 given |
+| Friday, May 22, 3:30 pm | SciComp Zoom meeting: assignment 4 due |
+| Tuesday, May 26 (probably)   | final questionnaire sent out |
 
 # Curriculum
 
