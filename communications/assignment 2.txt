@@ -1,8 +1,30 @@
 Hello,
 
-For the week of May 4, we'll be working through sections 3 and 4 of the Udemy course.  Section 3 is called "Fork and Clone", but it would be better titled "More Git Basics".  Section 4 is about branching, which is a very powerful tool for keeping your work (a) organized, and (b) safe from unwanted changes.  I think section 4 is more difficult than the preceding three, so allow yourself time to work through it without rushing.
+For the week of May 4 (due May 8), we'll be working through sections 3 and 4 of the Udemy course.  Section 3 is called "Fork and Clone", but it would be better titled "More Git Basics".  Section 4 is about branching, which is a very powerful tool for keeping your work (a) organized, and (b) safe from unwanted changes.  I think section 4 is more difficult than the preceding three, so allow yourself time to work through it without rushing.
+
+You should also watch video 34 from Section 5 after video 31 (or after 32, it's not critical).  This video explains branches and merges better than he does in earlier videos.  In particular, I like the diagrams he draws in 34 a lot better than the earlier videos.  I will probably rant about this in class.
+
+You should optionally also watch any applicable videos in Section 10 if you are interesting in using git and GitHub from an IDE.
+
+Notes on section 3 and 4:
+- Remember, you can clone or fork any repositories you like.  It might be harder to follow along exactly, but all that matters is that you're changing files.  The content doesn't matter for learning git.  Feel free to use the repository for this course if you like (https://github.com/JaneliaSciComp/2020AprilGitCourse); it's not as big or interesting as others, but it is meant for this course, and anything you do won't be noticed by or interfere with anyone outside Janelia.
+- Honestly, "git log" on the command line is a pain.  If you've chosen to experiment with a GUI client of some kind, this is a good time to do so.  Compare the information you see and how much work you have to do to get it.  
 
 
+Possible/probable topics for the first SciComp meeting:
+- summary/commentary
+- central concept: your repo is yours (local vs remote repos)
+- git branching from a graph perspective
+- common workflows with branches
+- tips & miscellaneous
+- next assignment 
+- Q&A
+
+
+Remember, post anything on Slack you'd like to see addressed, whether it's a specific live demo, a more detailed explanation of a topic from the videos, or a topic you think we might not otherwise cover.  
+
+
+Don
 
 
 

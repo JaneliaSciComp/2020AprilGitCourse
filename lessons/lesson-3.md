@@ -9,10 +9,30 @@
 
 ## summary/commentary
 
+-- check: issue and pr linking; "solves" word required?
+
+
+## rebase vs merge
+
+## merge conflict tools
 
 
 
+
+
+## advanced topics I
+
+
+
+
+## tips & miscellaneous
+
+
+## next assignment
+- notes on upcoming optional stuff: what to do, ignore
 
 
 
 ## Q&A
+
+
