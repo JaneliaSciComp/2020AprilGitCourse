@@ -4,8 +4,9 @@
 - laptop (plug in to power)
 - AirPods?
 - water 
-- iPad with lesson 1 notes (and assignment 2 notes)
+- quit Slack and Mail (notifications)
 - open IJ, Sublime x 2, GitHub app, terminal (cd to the class repo)
+- iPad with lesson 1 notes (and assignment 2 notes)
 
 ## course intro
 - up-front honesty: there's going to be some rough edges
