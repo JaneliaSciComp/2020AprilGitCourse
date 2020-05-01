@@ -8,19 +8,21 @@
 - open IJ, Sublime x 2, GitHub app, terminal (cd to the repo)
 
 ## course intro
+- up-front honesty: there's going to be some rough edges
+    + we planned to do a course maybe later in the year
+    + rushed to put this together right now
+    + but some of this will be less well prepared than I would like (ask questions!)
+- the course is really fluid
+    + overall Udemy + SciComp = lots of flexibility
+    + before the class, request specific content/topics (give me lead time!)
+    + that goes for pace, too; kind of worried the pace is too aggressive
 - Zoom logistics
     + webinar mode: I can't see you! (share screen?)
     + raise hand for question; moderators will unmute you
     + or v. quick comments in chat (eg, bigger font, can't hear, etc)
-    + I'll post polls in Slack after each class
+    + recorded; Zoom links Monday
     + in case of sudden disconnects, watch Slack channel
-- up-front honesty: there's going to be some rough edges
-    + we planned to do a course maybe later in the year
-    + rushed to put this together right now
-- the course is really fluid
-    + before the class, request specific content/topics (give me lead time!)
-    + that goes for pace, too; kind of worried the pace is too aggressive
-    + but overall Udemy + SciComp = lots of flexibility
+    + I'll post polls in Slack or Google forms after each class
 - Udemy:
     + I really liked this instructor's approach; very close to the way I would present things
     + I hope he is understandable; accent light, grammar excellent, and either very well rehearsed or well edited or both
@@ -75,7 +77,7 @@ Udemy 2: Getting Started with GitHub
 
 ## thoughts on git command-line & GUI
 - why command-line?
-    + it's the most consistent interface; lots of GUI clients, but only one command-line, basically
+    + it's the most consistent interface, and the reference interface; lots of GUI clients, but only one command-line, basically
     + GUI clients use the command line underneath; many will even show you the exact commands they are executing; knowing commandline = understanding what they are really doing, regardless of what they call it
     + if you get into trouble (and you will), solutions online (eg Stack Overflow) will show you the answers on the command-line; it's the common language of git
 - purists might reject the need for GUIs, but I believe they are very useful
@@ -102,6 +104,7 @@ Udemy 2: Getting Started with GitHub
 
 ## what should I commit? when should I commit?
 - time for practical stuff!
+- lots of opinions in git, because it's very flexible; my goal is to give you advice that will work, practically, as a beginner, most of the time
 - what to commit?  git is intended for code, but useful for anything with similar characteristics:
     + need to keep version history
         * reproducibility
@@ -150,6 +153,9 @@ Udemy 2: Getting Started with GitHub
 
 
 ## looking forward...next assignment
+- see "assignment 2.txt"
+- and note that it'll be sent out after class
+- Zoom recording takes some time to process; I expect to send links Monday morning
 
 
 ## Q&A
@@ -157,7 +163,8 @@ Udemy 2: Getting Started with GitHub
 
 
 ## closing poll
-- speed so far?
+- pace so far?
+- clarity so far?
 - topics you want covered?
 
 
