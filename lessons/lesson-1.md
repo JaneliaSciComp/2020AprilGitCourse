@@ -1,11 +1,11 @@
 # notes for lesson 1
 
 ## prep
-- laptop (plug in to power?)
-- Airpods?
+- laptop (plug in to power)
+- AirPods?
 - water 
-- iPad with course notes
-- open IJ, Sublime x 2, GitHub app, terminal (cd to the repo)
+- iPad with lesson 1 notes (and assignment 2 notes)
+- open IJ, Sublime x 2, GitHub app, terminal (cd to the class repo)
 
 ## course intro
 - up-front honesty: there's going to be some rough edges
