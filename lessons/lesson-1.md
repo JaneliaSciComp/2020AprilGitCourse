@@ -22,20 +22,19 @@
     + or v. quick comments in chat (eg, bigger font, can't hear, etc)
     + recorded; Zoom links Monday
     + in case of sudden disconnects, watch Slack channel
-    + I'll post polls in Slack or Google forms after each class
+    + I'll send a link to a poll after each class
 - Udemy:
     + I really liked this instructor's approach; very close to the way I would present things
     + I hope he is understandable; accent light, grammar excellent, and either very well rehearsed or well edited or both
     + when he plays with repos and code, you don't need to understand what he's doing or follow it slavishly; you could, for example, just create random text files and edit them instead of html and css
     + likewise, when he forks/clones other outside repositories, you don't need to use the same ones he does; you can work with repos you're already familiar with, or you can use the repo for this class
     + however, if you feel more comfortable being able to compare directly to his output, it's best to follow him closely
-    + this is especially true because he will, in later lessons, rely on the state of the local and remote repos when he teaches later concepts
-    + later lessons get squirrelly when he uses two accounts to demonstrate collaboration
 - the course repo
     + linked from Slack; show
     + meant both as example but will contain a lot of my notes and things
         * curriculum (updated) and resources on wiki
         * including lesson plans; they are not admittedly meant for you to read, but they might help
+        * also my notes on the videos
     + will use as scratch space for demos, etc.
 
 
@@ -160,11 +159,5 @@ Udemy 2: Getting Started with GitHub
 
 ## Q&A
 
-
-
-## closing poll
-- pace so far?
-- clarity so far?
-- topics you want covered?
 
 
