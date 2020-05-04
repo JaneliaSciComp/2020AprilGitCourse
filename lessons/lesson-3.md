@@ -1,11 +1,10 @@
 # notes for lesson 3
 
 ## prep
-- laptop (plug in to power?)
-- Airpods?
+- laptop (plug in to power)
 - water 
-- iPad with course notes
-
+- quit Slack and Mail (notifications)
+- iPad with lesson, next assignment notes
 
 ## summary/commentary
 
