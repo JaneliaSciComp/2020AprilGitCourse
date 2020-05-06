@@ -73,54 +73,129 @@ Udemy 4: Working with Branches
 
 
 ## central concept: git as a graph: commits, HEAD, branches, and remotes
-- kind of rethinking doing this freehand...
-- LibreOffice Draw?  yes, looks like it'll do basic OmniGraffle stuff, which is all I need
-    + practice!  generate some reference diagrams/starting point for what I want to demo
-    + or: prepare it beforehand, so you can upload it for future reference?
+- this will be a very big section; going to explain the central concept of git commits as nodes in a graph
+    + important unifying framework for making sense of commits, branching and merging, and pushing and pulling
+    + will answer questions like how merges differ, why it's OK to delete branches, and the difference between git pull and git fetch
+    + see think like a git website & Pro Git book (resources in course GH page)
+- directed acyclical graph (DAG); a commit can have multiple parents or  children, but there is a directionality back to the first commit; no loops
 
-- arrows point to parents!  it's tempting to point into the future, but that's not the way the data structures work here
-- directed acyclical graph; a commit can have multiple parents or multiple children, but there is always a directionality back to the first commit
+commits, master, HEAD
+- commits have parents
+    + commit has metadata (who/when/etc)
+    + commit has data (generally stored as diff from parent)
+- HEAD is a label pointing to parent of next commit
+    + look into .git: HEAD and refs/master/head (= hash of HEAD commit)
+    + advances when you commit
+branching and merging
+- branches are also labels pointing to commits
+    + also advance when you commit on that branch
+    + and HEAD actually knows what branch you're on, so it points to branch
+    + explains why branching is so easy (compare svn)
+- merges
+    + commit on a branch, but not on master, then merge: just move the pointer
+    + there's no new commit = ffwd merge
+    + but do work on master first, then merge: now we're combining changes from two (or more) branches, so we need a new commit that has multiple parents = recursive strategy merge
+    + either way, the old branch label is now unneeded; it can be deleted; the commits don't disappear or change; the recursive merge even keeps the branch name in the commit message (by default)
+detached HEAD
+- you can checkout any commit you like; if it's not a branch label, it's a detached HEAD
+    + you should be wary but not afraid of this
+    + if you just checkout another branch, no worries
+    + if you do work, though...danger!  
+        * git will periodically look for commits it can't reach from branch labels; it will then delete them
+        * so any commits done on a detached HEAD are vulnerable, after you move HEAD to somewhre else
+        * what to do?  just add a branch label right there!
+- likewise, if you delete an unmerged branch, you're just removing the label
+    + for a while, that commit may be reachable
+    + but the git gc will delete it at some point
+    + note that most of the time, git/GitHub will complain loudly if you try to delete an unmerged branch (just as it will suggest deleting a branch you've merged)
+remotes & fetch/push/pull
+- this is where we see git as repo synchronization tool (as opposed to just version control)
+- your repo and its remote are linked and have a common history
+    + remote has its own branch labels
+    + your local remote has a copy of those branches (eg, origin/master)
+    + this is the "tracking branch"
+- make a local change: master advances, origin/master does not
+    + then you push; assume no changes on origin
+    + commit is copied to origin, master advances on origin
+    + and your o/m label advances
+- someone else pushes a change, local unchanged
+    + git status doesn't help; it only knows what's local
+    + if you pulled, though, you'd get the change without issue; what's happening?
+    + git pull = git fetch + git merge
+    + git fetch updates all remote branches and tags
+    + now git status = one behind
+    + in fact, you can git branch -a to show all branches, including remotes
+    + you can git log origin/master to show its history 
+    + and in this case, git merge is ffwd
+- someone pushes a change, but local changed
+    + git status says one ahead (it's just local)
+    + push: rejected!  but git status doesn't change?
+    + git fetch grabs remote branches
+    + now git status = diverged (ahead and behind)
+    + git pull/git merge = new commit
+    + now git status is one ahead
+    + then git push
+
+- that is a lot to take in...but hopefully that framework will give you a useful way to think about git commits and branches
+- should probably demo the push/pull parts on the command line, especially the rejected message?
 
 
-- detached HEAD in here?
-    + and git deletion (gc) of commits unreachable from all branch heads
-    + which doesn't include commits in merged branches!
-
-- think like a git website & Pro Git book
-
-
-
-
-## git reset
-- full section with demo or just a mention?
-- seems valuable to demonstrate as a tool for getting out of trouble
-- git reset vs git checkout
-- hard, soft, mixed options
-- danger zone!
-- lets you branching after the fact
-
-
-# deleting, renaming, and moving files
+## deleting, renaming, and moving files
+- like creating or editing files, anything else you do to local files is something git wants to know about
 - deleting files: 
     +  you can delete the file and then stage it (git add) (which is weird because the file is gone!)
     +  or you can git rm which does both
     +  then commit
-    +  but you have to tell git what you did
+    +  either way tells git what you did
 - likewise move/rename
     + git tracks content, not files...and rename doesn't change content
     + git knows this, but how that's displayed can be weird and confusing
-    + use git mv to do this
+    + use git mv (source file) (destinateion file) to do this
 - demo this
 
 
-## tips & miscellaneous
-- git command docs:
-    + "Pro Git" book on git-scm.com
-    + demo searching on "man git command"
+## git reset
+- this is a powerful and dangerous command; usually used for getting yourself out of trouble in your repo
+- we now have background to understand how it works
+- as we've seen, git checkout moves HEAD
+- git reset moves both HEAD and the branch label
+    + its arguments (hard, soft, mixed) determine what happens to local files and staged files
+    + note staging area = staging index = "the index"
+    + --hard = most common, most dangerous; sets local/staged files = HEAD
+        * basically, discards everything and resets HEAD and branch to chosen commit
+        * it's a drastic go-back-in-time option
+        * it discards information
+    + --mixed = default = staged files removed, changes moved back to local files, which are unchanged
+        * doesn't discard uncommitted changes, but leaves none of them staged
+    + --soft = only branch moved; no staged/local files changed
+- git reset by default works on HEAD; this has the effect of cleaning up the staging area and local files; not that dangerous
+    + and GUI tools often make this easy to do manually anyway (discard changes and unstage files)
+- git reset on an older commit is where it gets dangerous (and useful)
+    + once you git reset --hard back to an earlier commit, the later commits on that branch become orphaned and vulnerable to gc
+    + NEVER DO THIS IF YOU'VE PUSHED
+    + you're rewriting history, and you should not rewrite history that you've shared
+    + from Atlassian tutorial: "As soon as you add new commits after the reset, Git will think that your local history has diverged from origin/master, and the merge commit required to synchronize your repositories is likely to confuse and frustrate your team."
+- branching after the fact
+    + get to a point, uh oh, should have branched
+    + make the branch now!
+    + git reset master back to where you wanted it
+    + checkout new branch and continue
+- so the bottom line on git reset is:
+    + never after pushing
+    + be really really careful
+    + you can use branches (after the fact) to mitigate risk
+- git revert: more of an "inverse commit"; rather than back up, it moves forward, but it adds a new commit that undoes previous changes
+    + safer but messier?
+    + not sure I've ever used this or seen it used?
+    + but it is appropriate to fix things after you've pushed
+- kind of don't want to demo, but I can...
 
-- branch deletion
-    + showing commits aren't deleted
-    + pushing deletion
+
+## tips & miscellaneous
+- tags are labels like branches, but they never advance
+- if you delete branches locally, you need to delete them remotely, too
+    + git branch -d (branchname) is local
+    + git push origin --delete (branchname) is remote
 
 
 ## next assignment
