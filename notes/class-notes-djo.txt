@@ -5,26 +5,26 @@ class notes
 - warning: for entertainment purposes only!  not meant as a study aid!
 
 Section 1: Getting Started with Git (1h)
-- 1: What is Version Control
+- 1: What is Version Control 
     - emphasizes difference between git, GitHub
     - covers basics: track changes, collaborate
     - mention careful with using git for big binaries!  (he mentions doc, pdf)
-- 2: Install Git on Windows
-- 3: Install Git on macOS
-- 4: Install Git on Linux
+- 2: Install Git on Windows 
+- 3: Install Git on macOS 
+- 4: Install Git on Linux 
     - all three: sends to https://git-scm.com/downloads
     - can skip the ones you don't need
     - includes git --version test
     - Mac guides through "unidentified developer" security step
-- 5: Setup Git Workspace on Windows
-- 6: Setup Git Workspace on Mac/Linux
+- 5: Setup Git Workspace on Windows 
+- 6: Setup Git Workspace on Mac/Linux 
     - configure git-bash or terminal
     - configure the command prompt using bash_profile and two shell scripts
         that heavily configure prompt and autocomplete
     - the files look legit; they are dense, and I didn't check every line, but
         they look safe and OK; the two scripts are directly from git, apparently
     - for Windows, move and rename files; for Mac/Linux, need to edit existing bash profile
-- 7: Executing a First Commit
+- 7: Executing a First Commit 
     - using VSCode as editor; referenced IDE section later
     - this is the start of things you should follow along with
     -- (and I do) (but I didn't do the terminal config, so I don't see that stuff;
@@ -33,56 +33,48 @@ Section 1: Getting Started with Git (1h)
 - 8: Understanding The Full Commiting Process
     - don't mess with .git!
     - yes, it can get big...holds whole history
-    - staging area is kind of a pain;
+    - staging area is kind of a pain; 
     -- it's where you choose which changes to commit (need not be all)
     -- see https://stackoverflow.com/questions/49228209/whats-the-use-of-the-staging-area-in-git
     -- but beware changes after staging!  need to restage
     --> I personally rarely stage until I also commit
-- 9: Reviewing File Changes
+- 9: Reviewing File Changes 
     - ugh, command line diff...you don't have to!
     -- editor or GUI client or stand-alone client will help
-    - note that git in general does a good job of identifying small changes
-- 10: Missing Git Configurations
+    - note that git in general does a good job of identifying small changes 
+- 10: Missing Git Configurations 
     - set up name, email, editor
     - commit messages in editor
     - git hash (SHA)
     - git diff by hash
 
-      <head>
-      just adding some random text to commit
-      </head>
-
-
-        adding junk code again 
-
-
 Section 2: Getting Started with GitHub (40m)
-- 11: Git and GitHub
+- 11: Git and GitHub 
     - the difference!
     - (me: git = source control + synchronization tools) (your repo is yours)
     - he covers this nicely...
-- 12: Create your GitHub account
+- 12: Create your GitHub account 
     - straightforward
     - mention orgs
     - tour
     - create first repo, same name; no README; stop there
-- 13: Pushing your Local Repo to GitHub
+- 13: Pushing your Local Repo to GitHub 
     - straightforward
     - GitHub of course changes UI often; I didn't see "contributors" tab
     - not sure why it said "push -u" in the GitHub suggestion?
     -- apparently sets upstream tracking branch?
     - origin and master: naming conventions
-- 14: Editing Code and Commiting from GitHub
+- 14: Editing Code and Commiting from GitHub 
     - basically, mostly don't do this!
     -- it's too easy!  enhances your ability to make errors
     -- no opportunity to test!
     - if you must, try to limit to very simple changes, especially
         those in (eg) text files that aren't code (ie, don't need testing)
-- 15: Pulling from the Remote
+- 15: Pulling from the Remote 
     - he does full "git pull origin master" at start; later he sets upstream
-    - output will vary; mine was wordier
+    - output will vary; mine was wordier 
     - note that the -u in GitHub's "new repo" command hint would do this
-- 16: Check for Changes with Git Status
+- 16: Check for Changes with Git Status 
     - GIT STATUS IS YOUR BEST FRIEND!
     -- often gives you nice hints as to the command you might want
     - hmm, my git status is not showing the proper remote status?  says up to date?
@@ -92,9 +84,9 @@ Section 2: Getting Started with GitHub (40m)
         in any way; that situation will be covered later (merge conflicts)
 
 Section 3: Fork and Clone (1h15m)
-- 17: Intro to Forking GitHub Repositories
+- 17: Intro to Forking GitHub Repositories 
     - fork is only GitHub, not git
-- 18: Cloning a Repository
+- 18: Cloning a Repository 
     - repo proliferation begins...
     - remember, your repo is yours
     - note when cloning, he did a folder-in-folder with same name (if he hadn't misspelled it!)
@@ -102,45 +94,45 @@ Section 3: Fork and Clone (1h15m)
     -- and you will probably make some mistakes and get more/fewer folders than you want!
     - clone sets the remote automatically
     - you can clone anything you like; from Janelia, something you use, or whatever
-- 19: Exploring Git Logs
+- 19: Exploring Git Logs 
     - creates a new folder for a new repo on disk; clones big project for more commits to see
     - I'm not going to clone a new one; I'll follow in the workstation project
     - talks about HEAD
     - git diff by sha
     --> GUI clients are often pretty good about automatically grabbing and
         displaying some of this info
-- 20: Getting Commit and File Details with Git
+- 20: Getting Commit and File Details with Git 
     - git show ~ git log + git diff
     - HEAD~1 etc.
     -- again, GUI often shows things in a list, making that unneeded
     - git annotate filename (like IJ annotate; kind of like git blame?)
     - IDE support preview
-- 21: Exploring Commit and File Details from GitHub
+- 21: Exploring Commit and File Details from GitHub 
     - GitHub display of same info as previously
     - Blame button
     - browse earlier version of repo
     - History button for a file (git log filename, right?)
-- 22: Making Changes
+- 22: Making Changes 
     - when making changes, not all editors will show blame the same way
     - git commit -a (careful...you lose control this way)
     - could have ommitted "origin master" on push, I think
     - again, your repo is yours
     - preview of pull request
     -- obviously be careful here!
-- 23: Undoing Changes and Reverting Commits
+- 23: Undoing Changes and Reverting Commits 
     - git checkout > git restore in latest git (very new!)
     - git status hints to the rescue again!
     - the stage vs unstaged confusion again...
     - git reset is the gun you don't want to point at your foot!
     - this is a simple "replace file with older version" fix
-    -- there are other rollback options
+    -- there are other rollback options 
     - git add .: not a fan; explicitly adding files is better
     -- but I understand the attraction if you're not using an IDE or GUI client
     -- not so bad with reset and checkout, though
 
 Section 4: Working with Branches (1h15m)
-- 24: Good Version Control Practices
-    - "you should always have a working version": people will argue,
+- 24: Good Version Control Practices 
+    - "you should always have a working version": people will argue, 
         but it's generally good advice at the start
     -- lots of advice that people argue about aren't worth arguing about
         if you're a beginner
@@ -151,7 +143,7 @@ Section 4: Working with Branches (1h15m)
     - I don't like his diagrams because the branches look disconnected,
         when at some point, they were part of the trunk!
     -- (I guess he was saving that for the next section)
-- 25: What is a Branch?
+- 25: What is a Branch? 
     - he's assuming a specific layout here, but it doesn't really matter
     - I really don't like his train-track diagram at ~3m!
     - deleting branches is also kind of misleading!
@@ -159,59 +151,59 @@ Section 4: Working with Branches (1h15m)
     - fork is kind of a remote branch; it's not a git thing, but a GitHub thing
     - more clarification on HEAD as a pointer?
     - show a GUI branch diagram!
-- 26: Creating a Branch with Git
+- 26: Creating a Branch with Git 
     - (I cloned rather than forked the html5-boilerplate repo)
     - GUI clients often immediately checkout a new branch
     - he talks about branching practice along with branching, which is good
-    - note that git checkout is not just for that terminal session; it's
+    - note that git checkout is not just for that terminal session; it's 
         persistant (there are files written on disk)
     -- your other clients will also see it immediately
-- 27: Creating a Branch with GitHub
+- 27: Creating a Branch with GitHub 
     - editing files in GH again, ugh
     - honestly, you're not really going to do a lot of this from GH normally
     - peek ahead at pull request
-- 28: Adding a gitignore File
+- 28: Adding a gitignore File 
     - things you shouldn't put in git: pwds, credentials, api keys, etc
     - how to clean them out if you commit and push them to GH (hard)
     - alternate plan: shouldn't be in code anyway; put in env variables
-        (part of deployment) (although you often want that automated
+        (part of deployment) (although you often want that automated 
         and committed, too...)
     - this is not a license to be messy!  you should still carefully separate
-        your code from your other random stuff rather than using .gitignore to
+        your code from your other random stuff rather than using .gitignore to 
         manage it for you!
     - in fact, if you're ignoring a lot of files, that's a sign that maybe
         they are in the wrong place (ie, separate builds and code, data and code, etc.)
     -- although a lot of things will not give you good choices (require certain files
         and layouts)
-- 29: Syncing Branches
+- 29: Syncing Branches 
     - git push origin [branchname]
     - how many commits ahead/behind master
     - git checkout --track origin/[branchname]: pulls, checks out, tracks, all at once
     --> yes, sometimes you don't want to track, or change tracking, but it's rare
     --- often when switching remote (eg, bitbucket to github)
     - how to show remotes?
-- 30: Graph the Branches on the Terminal
+- 30: Graph the Branches on the Terminal 
     - git log --graph
     - this is where graphical clients do a far better job than the terminal
     -- on GitHub, Insights > Network
     - note that the various branch labels (which are pointers to a line of commits) are
         as of the last time your client (of whatever kind) talked to the remote
-- 31: Merging Branches in the Terminal
+- 31: Merging Branches in the Terminal 
     - his merge did a fast-forward, I think?  need to define that
     - note that git generates the message; a merge is a new commit
     - yes, deleting branches is normal procedure; you are going to use a lot of them,
         and you don't want the clutter
     -- some tools will offer to delete immediately when you make a merge; some will
         also warn if you try to delete and the contents haven't been merged
-    -- need to verify (maybe demo) that commits (and commit messages) aren't lost,
+    -- need to verify (maybe demo) that commits (and commit messages) aren't lost, 
         just no longer have a branch pointer/label attached
     -- I believe you can push branch deletion, too?
     - maybe suggest watching #34 here, types of merges
-- 32: Pull Requests in GitHub
+- 32: Pull Requests in GitHub 
     - this is purely a GitHub thing, not git
     - but you can do the same, with more typing, without GH, between two repos
     - it's kind of weird that he's doing his own pull requests; normally you'd
-        just be merging in your local repo and pushing changes
+        just be merging in your local repo and pushing changes 
         - normally the pull request is social conventions on top of git enabling
         merging between two different repos controlled by different people/orgs
     - note that GH is very good about suggesting pull requests when you push changes
@@ -221,19 +213,19 @@ Section 4: Working with Branches (1h15m)
 
 
 Section 5: Merge Conflicts (1h)
-- 33: When do Merge Conflicts Happen?
+- 33: When do Merge Conflicts Happen? 
     - merge conflicts are the cost of branches
     - branches are extraordinarily useful
     - and though merge conflicts can be hairy, need to respect and not fear
     - intro to git <<<<< ===== >>>>>> markings in file
-- 34: Types of Merges
+- 34: Types of Merges 
     - he's making diagrams I like now; I will probably show them before this
     - fast-forward merge (which doesn't create a new commit)
     - and he shows branch deletion as a pointer removal
     - recursive merge; he shows branch gone but commits remain
     - he doesn't mention the octopus merge...
     --> I should assign this video earlier, after 31?
-- 35: A First Merge Conflict
+- 35: A First Merge Conflict 
     - back to original repo
     - what's the resources for?  looks like the repo before changes
     - create two branches from master, edit on each one without merging
@@ -241,10 +233,10 @@ Section 5: Merge Conflicts (1h)
     - merge one branch into master: ffwd
     - the colors are in his editor; this is why GUI clients are good for merge conflicts
     - git status tells you how to abort
-- 36: Solving the Conflict
+- 36: Solving the Conflict 
     - looking forward: GUIs will make this easier
     - as usual, git status tells you the steps
-    --> depending on how carefully you followed his edits, the resolution
+    --> depending on how carefully you followed his edits, the resolution   
         steps might vary!  I was sloppy and had more to fix; this is one
         spot where knowing some html does help
     - git add; then git status shows you what's next
@@ -262,19 +254,19 @@ Section 5: Merge Conflicts (1h)
         if not, you should still test!
     -- notice in fact that he missed something in his resolution: he left in some
         duplicate lines
-- 37: Merge Conflicts on GitHub
+- 37: Merge Conflicts on GitHub 
     - remember, a pull request is a request to merge to the owner of a repo
     -- could also be two people on the same repo, as it turns out; for NeuTu,
         Ting is the lead dev, and I work on branches; I send him pull requests
         to merge my branches into master on the same repo
-    - not really easy to follow along for this one; you could find another
+    - not really easy to follow along for this one; you could find another 
         person and fork each others repos and make incompatible changes, send
         pull requests if you like
     - or could do it live in class with a single volunteer?
     - the concepts are similar as a regular pull request; we're just separating
         the responsibilities for fixing conflicts
     -- I think his pretending to be two people is actually confusing
-- 38: Solving Merge Conflicts on GitHub
+- 38: Solving Merge Conflicts on GitHub 
     - if you can merge a pull request immediately, could be either ffwd or recursive
         merge, remember
     - I like his comment on pushback; contributor really ought to fix things, mostly;
@@ -285,7 +277,7 @@ Section 5: Merge Conflicts (1h)
         and in some cases, you have to specify different remotes than origin; but
         it can be done; when changes are extensive, you might want to use better
         tools than the GH website to do your work (ie, tests!!!)
-- 39: Adding Tags to the Repository
+- 39: Adding Tags to the Repository 
     - tags for versioning
     - if you didn't do the pull request stuff, you won't need to pull
     - git tag -a [tag name]
@@ -296,19 +288,19 @@ Section 5: Merge Conflicts (1h)
     -- but again, adding tags, especially to older commits, is easy in GUIs,
         because they display log and branch info much better than the command line
     - git push --tags
-    - on GH: release is a GH thing, but seems to happen at least partially
+    - on GH: release is a GH thing, but seems to happen at least partially 
         automatically from tags?
     -- holds doubly for the archives GH creates for a release
 
 Section 6: Collaboration in GitHub (1h)
-- 40: Colaboration on Private Repos and Cloning to Colab
+- 40: Colaboration on Private Repos and Cloning to Colab 
     - working 100% in GH
     - not sure what he's up to right now...
     - added his second account as collab on private repo of first account
     -- showed invite
     - collab can push, not just fork/clone
     - huh, GH can show an .ipynb file
-    - Google Colab?  can edit ipynb online, without installing anything
+    - Google Colab?  can edit ipynb online, without installing anything 
         (which we don't want to do for a git course)
     -- need a Google account for this
     - create folder in drive, python 3 notebook in colab
@@ -337,8 +329,8 @@ Section 6: Collaboration in GitHub (1h)
         not stick to text editable code?)
     --> I don't really understand what the payoff is here
     -- and without two accounts, you can't really expect students to follow along?
-- 41: Protecting Branches on GitHub
-    - exactly which branches you protect, who is allowed to do what, is
+- 41: Protecting Branches on GitHub 
+    - exactly which branches you protect, who is allowed to do what, is 
         part of your overall branching and release strategy
     - really don't rename master...everyone expects it
     - add rule to protect master & dev; require pull request review
@@ -356,7 +348,7 @@ Section 6: Collaboration in GitHub (1h)
     - hmm...I could create a repo with everyone as collaborators...let them
         push and create PR to it...protect a branch, leave another open, etc.
     - note that this info is only if you have collaborator who can push directly!
-- 42: Requiring Reviews in Pull Requests
+- 42: Requiring Reviews in Pull Requests 
     - assign reviewer
     - also assignee, label fields
     -- you probably shouldn't change other project's labels!
@@ -366,7 +358,7 @@ Section 6: Collaboration in GitHub (1h)
         (since this assignee has merge permission)
     - and delete branch
     - this is still confusing with the two accounts business
-- 43: Working with Issues and PRs in GitHub
+- 43: Working with Issues and PRs in GitHub 
     - issues need to be enabled in the repo (isn't that default on?)
     - issue submission (again with the dual accounts) (with task list) (and assignee)
     - does edits in colab
@@ -381,7 +373,7 @@ Section 6: Collaboration in GitHub (1h)
     - then he did another PR from dev > master
 
 Section 7: Working with an Open Source Project (1h10m)
-- 44: Adding a README file
+- 44: Adding a README file 
     - working with the TextAnalytics repo from above, ugh
     - sets it public
     -- at Janelia, be careful!  check with your supervisor before making things public
@@ -393,7 +385,7 @@ Section 7: Working with an Open Source Project (1h10m)
     - GH topic list
     - how to follow along: don't have to do a version of his repo; could even
         just create a new, empty repo and fill in dummy info
-- 45: Adding the important Templates
+- 45: Adding the important Templates 
     - contributing file (I have never seen this?)
     -- social stuff: thanks, code of conduct
     -- what help is requested/welcome: features, bug reports, fixes, and procedures for them
@@ -406,7 +398,7 @@ Section 7: Working with an Open Source Project (1h10m)
     - as above, you can do this in any repo you have
     - but testing it will be difficult as usual (he does a better job with
         the two-account confusion here, I thought)
-- 46: Filtering the Git Log to Better Understand the repo
+- 46: Filtering the Git Log to Better Understand the repo 
     - looking from contributor side
     - he wants us to fork his TextAnalytics repo
     - at least he clones locally
@@ -418,7 +410,7 @@ Section 7: Working with an Open Source Project (1h10m)
     --> honestly, this is just masochistic; just use a GUI of some kind
     - however, examining the repo is a good idea
     - last bit: he's back to colab and drive, ugh...
-- 47: The Full Contribution Flow - Beyond Pull Requests
+- 47: The Full Contribution Flow - Beyond Pull Requests 
     - walks through the fork and clone again in colab
     - seems better if we do this on a simpler repo I create/control?
         the whole ipynb thing doesn't add to the course at all
@@ -439,55 +431,55 @@ Section 7: Working with an Open Source Project (1h10m)
     -- this goes for JIRA as well as GH, too; there is integration for JIRA as well
     - branch names are really part of your whole branching and release strategy
     -- eg, bug vs hotfix or whatever (or release)
-- 49: Importance of Descriptive Commits
-    - 50 character limit?  debatable; hardcore commandline users should not
+- 49: Importance of Descriptive Commits 
+    - 50 character limit?  debatable; hardcore commandline users should not 
         hold back progress
     - capitalize?  no period?  these are offensive in combination
-    - seems to be following GH's published guidelines?
+    - seems to be following GH's published guidelines? 
     - but: if a project has guidelines, you should follow them
 
 Section 8: Markdown (1h10m)
-- 50: Introduction to Markdown
+- 50: Introduction to Markdown 
     - useful in GH and elsewhere (eg, Jupyter notebooks)
     - some text editors support markdown, with previews (see video 56)
     -- it's often used in blogging software because it translates to html very easily
     - but note that there are some slightly different dialects!
     - note GH preview is actually the diff (shows adds and deletes, red/green margin bars)
-- 51: Formatting Text with Markdown
+- 51: Formatting Text with Markdown 
     - you can practice this in any repo, as before
     - basic formatting
     - hmm, GH makes headers into link anchors
-- 52: Creating Lists with Markdown
+- 52: Creating Lists with Markdown 
     - stuff
-- 53: Adding Tables and Links with Markdown
+- 53: Adding Tables and Links with Markdown 
     - in reality, tables are a pain
     - huh, don't need leading and trailing | character?
     - can't really do eg multi-line table cells
-- 54: Images and Videos using Markdown
+- 54: Images and Videos using Markdown 
     - link from Internet or from your GH repo
     - his branching seems a little over-aggressive here
-- 55: Writing Code Blocks using Markdown
+- 55: Writing Code Blocks using Markdown 
     - stuff
-- 56: The Notion App
+- 56: The Notion App 
     - kind of an advertisement, but take it as an example of similar apps you can find
     - it's a wysiwyg GUI editor for Markdown
 
 Section 9: GitHub Pages (20m)
-- 57: Intro to GitHub Pages
+- 57: Intro to GitHub Pages 
     - website with GH repo backend
     - note: GH wiki is an alternative for some purposes
     - Jekyll = theming tool which uses markdown
     -- he doesn't cover creating your own html/css, which is supported
-- 58: Creating the Page's Content
+- 58: Creating the Page's Content 
     - create new repo; mine is private, GHPagesTest
     - create README.md from GH
     -- his example is a portfolio
     -- includes hand-made table of contents
     - commit
-- 59: Publishing a GitHub Page
+- 59: Publishing a GitHub Page 
     - Settings > GH Pages
     -- hmm, can't enable unless repo is public...or GitHub pro?
-    -- make my repo public
+    -- make my repo public    
     - choose source (master branch for us)
     - URL https://olbris.github.io/GHPagesTest/
     -- but it fails?  no, just takes a second
@@ -497,30 +489,30 @@ Section 9: GitHub Pages (20m)
     - he navigates to a gallery of GH Pages examples
 
 Section 10: Using Git and GitHub from the IDE (2h)
-- 60: Intro to Git in Different IDEs
+- 60: Intro to Git in Different IDEs 
     - intro; but he still pushes the terminal, which is fair
     - but I argue about the "save couple of seconds"; the information
         display, especially, is quite useful and much easier than the command line
-- 61: Git and GitHub in Android Studio
-- 62: Git and GitHub in Xcode
-- 63: Git and GitHub in Visual Studio Code
-- 64: Git and GitHub in Visual Studio
-- 65: Git and GitHub in VS for Mac
-- 66: Git and GitHub in IntelliJ
+- 61: Git and GitHub in Android Studio 
+- 62: Git and GitHub in Xcode 
+- 63: Git and GitHub in Visual Studio Code 
+- 64: Git and GitHub in Visual Studio 
+- 65: Git and GitHub in VS for Mac 
+- 66: Git and GitHub in IntelliJ 
     - he's using an Android/kotlin project as example
     - I wonder how well this will age...IJ is aggressive in changing things;
         I think they changed something in VCS recently, didn't they?
     - but overall looks fine...covers most basics, but not all (eg, no pull)
     -- only saw one point where he (maybe) made a UI blunder
-- 67: Git and GitHub in Eclipse
+- 67: Git and GitHub in Eclipse 
 
 Section 11: Intro to Continuous Integration and Delivery (45m)
     - entirely optional; I didn't do this section
     - I do know that Circle CI, for example, is a standard, widely-used tool
-- 68: What is Continuous Integration
-- 69: What is Continuous Delivery
-- 70: Using Circle CI from GitHub
-- 71: Using App Center from GitHub
+- 68: What is Continuous Integration 
+- 69: What is Continuous Delivery 
+- 70: Using Circle CI from GitHub 
+- 71: Using App Center from GitHub 
 
 Section 12: Extra Information - Source code, and other stuff
 - 72: Source Codes
@@ -530,3 +522,15 @@ Section 12: Extra Information - Source code, and other stuff
     - the guy who owns the umbrella course
     - resources = free PDS with links to free videos and ebooks
     - also references to his other paid courses, I think
+
+
+
+
+
+
+
+
+
+
+
+
