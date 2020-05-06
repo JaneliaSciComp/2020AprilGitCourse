@@ -1,3 +1,28 @@
 Hello all,
 
-For the week of May 11 (due May 15)...
+For the week of May 11 (due May 15) we'll cover sections 5 and 6 of the Udemy course.
+
+Section 5 (Merge Conflicts) is a lot like the past lessons.  Merge conflicts are a pain, but they are inevitable.  The name makes it sound like you're doing something wrong, that if you had done things right, there wouldn't be a conflict, but in truth, merge conflicts happen because you're using git to do what it's meant to do: enable multiple people to change the same code and carefully manage the process through which the changes are reconciled.  Merge conflicts are the price you pay for that capability.  This is also another place where GUIs make the job easier.  If you have been experimenting with using a GUI client or an IDE, be sure to try merge conflict resolution with them.  But everyone should follow along and try to resolve merge conflicts with their normal editor and the command line first.
+
+Section 6, unfortunately, is a bit of a problem for two reasons.  First, up until now, Eduardo has been editing some simple html files when demonstrating git operations.  For some reason, he decides to switch instead to using a Python notebook via Google's Colab hosting service, which to me just makes things a lot more complicated without any real purpose that I could see.  I mean, it's an interesting technology, but it doesn't help you learn git/GitHub (in fact, seems to make it harder).  And I *really* don't like how he handles the passwords in the URLs.  
+
+The second problem is that he is trying to teach collaboration with git and GitHub, and collaboration takes two people.  He uses two GitHub accounts for these demonstrations, his primary one, and a throwaway one he created for this course.  I found it confusing at times keeping track of which was which.  I wish he had consistently referred to one account as the "owner" and the other as the "contributor" or something like that.  Either way, though, it makes it difficult for you, the course participant, to follow along and do what he's doing, because you only have one account.  (We don't expect you to make a second account for this course; you can if you want to, but you don't need to.)
+
+So what should you do for section 6?
+
+* First, watch the videos.  Video 40 is pretty awful, but you should watch it anyway.  You don't really need to understand anything about Colab (unless it interests you), which makes a lot of it useless.  Videos 41-43 are focused more on GitHub and are understandable even if most of video 40 doesn't stick in your head.
+
+* Second, you can do many of the operations as yourself, with just one account.  You can push a branch, submit pull requests to yourself, and then accept it and merge on GitHub, all from your personal account.  You should go ahead and do the operations you can, even if it seems trivial (because you are basically accepting your own work).
+
+* Which repo to use?  If Colab is interesting to you, go ahead and play with it.  Otherwise, I don't think I can recommend going through the trouble of setting it up.  I would recommend either creating a new test repository with a few random text files, or forking the class repository and using that.  I would stay away from using the original html repository, though.  He comes back to that later, and it will be easier to follow along if you don't change it much.
+
+* If you really want to experiment with the collaboration parts of GitHub that you can't do alone, consider working with someone else in the class that you may know.  You can make each other collaborators on a repo and experiment with approval, branch protection, things like that.  I know that not everyone is comfortable doing this, so I'm going to try to figure out a better way to enable this practice.  We'll talk in class on Friday.  
+
+
+Week three is where the Udemy course and the SciComp lectures will start to diverge, and it'll continue into week four.  I'll rely on Udemy to teach you more about GitHub tools and collaboration practices, while the SciComp live lectures will spend more time on advanced git concepts.  I'll pick out some topics to cover in detail, while others will fall into the "you should know that this exists" category.
+
+
+As always, speak up on Slack for whatever reason you like...
+
+
+Don
