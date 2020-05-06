@@ -52,7 +52,10 @@ Section 1: Getting Started with Git (1h)
       just adding some random text to commit
       </head>
 
-      
+
+        adding junk code again 
+
+
 Section 2: Getting Started with GitHub (40m)
 - 11: Git and GitHub
     - the difference!
