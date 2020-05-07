@@ -5,7 +5,7 @@
 - water 
 - quit Slack and Mail (notifications)
 - iPad with lesson, next assignment notes
-- LibreOffice Draw running, diagrams ready
+- LibreOffice Draw running, diagrams ready (fresh duplicate file)
 - Sublime x 2 running
 - Terminal open, in repo dir
 
@@ -29,7 +29,7 @@ Udemy 3: Fork and Clone (aka more basics):
     + git checkout apparently > git restore in very latest version
     + git status gives you hints 
     + git reset later today
-- git comment -a and git add .: not a fan; explicit is better than implicit
+- git commit -a and git add .: not a fan; explicit is better than implicit
 
 Udemy 4: Working with Branches
 - branches are git's secret weapon
@@ -39,12 +39,13 @@ Udemy 4: Working with Branches
     + use them freely for isolation, for safety, for damage control
 - but branching brings along opinions; git is so flexible that the tool itself doesn't really suggest a specific way to do things; and so developers have a lot of opinions on the matter (including Eduardo)
     + part of what we want to do in this course is give you some good basic advice; others will disagree!
+    + my presentation on branching workflows will be next class
     + that said, his emphasis on good practices is important; it's better to have some scheme, for some reason, than no scheme
 - git branch state (what's checked out) is persistant across all sessions and clients; it's a property of the repo
     + cd .git and more HEAD, refs/heads
 - .gitignore
     + I have a .DS_Store in polls/ now; not just network drives, but any folder you visit in Finder
-    + show a GH .gitignore, maybe NeuTu or JW one
+    + show GH .gitignores: JW, NeuTu, marktips
     + not a license to be messy!  do not mix stuff that shouldn't be mixed!
     + if you're ignoring a lot of files, it's a bad sign (although admittedly some tools will require certain layouts that are not good choices)
     + remember, you commit .gitignore, so it should only be for things that other people have to worry about, too!
@@ -91,6 +92,7 @@ branching and merging
     + also advance when you commit on that branch
     + and HEAD actually knows what branch you're on, so it points to branch
     + explains why branching is so easy (compare svn)
+    + I hate Eduardo's train-track diagram
 - merges
     + commit on a branch, but not on master, then merge: just move the pointer
     + there's no new commit = ffwd merge
@@ -102,7 +104,7 @@ detached HEAD
     + if you just checkout another branch, no worries
     + if you do work, though...danger!  
         * git will periodically look for commits it can't reach from branch labels; it will then delete them
-        * so any commits done on a detached HEAD are vulnerable, after you move HEAD to somewhre else
+        * so any commits done on a detached HEAD are vulnerable, after you move HEAD to somewhere else
         * what to do?  just add a branch label right there!
 - likewise, if you delete an unmerged branch, you're just removing the label
     + for a while, that commit may be reachable
@@ -135,9 +137,8 @@ remotes & fetch/push/pull
     + git pull/git merge = new commit
     + now git status is one ahead
     + then git push
-
+- demo the push/pull parts on the command line, especially the rejected message
 - that is a lot to take in...but hopefully that framework will give you a useful way to think about git commits and branches
-- should probably demo the push/pull parts on the command line, especially the rejected message?
 
 
 ## deleting, renaming, and moving files
@@ -150,8 +151,19 @@ remotes & fetch/push/pull
 - likewise move/rename
     + git tracks content, not files...and rename doesn't change content
     + git knows this, but how that's displayed can be weird and confusing
-    + use git mv (source file) (destinateion file) to do this
+    + use git mv (source file) (destination file) to do this
 - demo this
+
+
+## tips & miscellaneous
+- (peek ahead) tags are labels like branches, but they never advance
+- if you delete branches locally, you need to delete them remotely, too
+    + git branch -d (branchname) is local
+    + git push origin --delete (branchname) is remote
+- never commit passwords, API keys, etc.!  
+    + it's a pain to remove them, since you have to remove from history as well as current file; worse if you push; there are tools, if just changing them isn't feasible
+    + put secrets in separate files or environment variables or deployment scripts
+    + there are GH bots that look for these, some friendly, some not!
 
 
 ## git reset
@@ -175,6 +187,7 @@ remotes & fetch/push/pull
     + NEVER DO THIS IF YOU'VE PUSHED
     + you're rewriting history, and you should not rewrite history that you've shared
     + from Atlassian tutorial: "As soon as you add new commits after the reset, Git will think that your local history has diverged from origin/master, and the merge commit required to synchronize your repositories is likely to confuse and frustrate your team."
+    + the fix (in my experience) might involve one person fixing the repo and everyone else re-cloning, for example
 - branching after the fact
     + get to a point, uh oh, should have branched
     + make the branch now!
@@ -188,14 +201,7 @@ remotes & fetch/push/pull
     + safer but messier?
     + not sure I've ever used this or seen it used?
     + but it is appropriate to fix things after you've pushed
-- kind of don't want to demo, but I can...
-
-
-## tips & miscellaneous
-- tags are labels like branches, but they never advance
-- if you delete branches locally, you need to delete them remotely, too
-    + git branch -d (branchname) is local
-    + git push origin --delete (branchname) is remote
+- kind of don't want to demo, but I could...
 
 
 ## next assignment
