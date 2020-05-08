@@ -28,14 +28,16 @@ Udemy 3: Fork and Clone (aka more basics):
     + git checkout apparently > git restore in very latest version
     + git status gives you hints 
     + git reset later today
-- git commit -a and git add .: not a fan; explicit is better than implicit
+- git commit -a and git add .
+    + not a fan; explicit is better than implicit; caught people committing core dumps, etc.
+    + but understandable if using command line
 
 Udemy 4: Working with Branches
 - branches are git's secret weapon
     + this is where it gets substantial
     + unless you've used svn etc., you have no idea how bad it was before
     + you hated branches because merging was impossible
-    + use them freely for isolation, for safety, for damage control
+    + use them freely for isolation: safety, damage control
 - but branching brings along opinions; git is so flexible that the tool itself doesn't really suggest a specific way to do things; and so developers have a lot of opinions on the matter (including Eduardo)
     + part of what we want to do in this course is give you some good basic advice; others will disagree!
     + my presentation on branching workflows will be next class
@@ -51,9 +53,7 @@ Udemy 4: Working with Branches
     + edit it in Sublime merge, show "untracked files" change, and commit and push
 - he calls video 29 "Syncing Branches", and that's an important choice of words; git is not only about version control in one repository (which may have one or many contributors itself), but it's also about synchronizing changes among many repos
 - tracking remotes: most commonly, you're only tracking one remote and you never change it; but it can be done, if you want to (a) change from GitHub to Bitbucket, etc, or (b) grab changes from multiple sources (eg, multiple people who have forked a project)
-- remember git fetch to grab changes from remote if your client doesn't see them (more soon)
-- merging: see 34: ffwd vs recursive (no commit vs commit w/multiple parents); mention octopus merge
-- yes, branch deletion is normal practice!  you don't actually delete the commits, though, just the branch (more soon)
+- lots more that I'll cover in "graph" part
 - pull requests:
     + again, just a GH thing; requests to pull and merge
     + his demos start to get a little confusing from here on as he demonstrates collaboration; watch carefully which accounts he works in
