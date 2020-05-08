@@ -16,10 +16,15 @@ So what should you do for section 6?
 
 * Which repo to use?  If Colab is interesting to you, go ahead and play with it.  Otherwise, I don't think I can recommend going through the trouble of setting it up.  I would recommend either creating a new test repository with a few random text files, or forking the class repository and using that.  I would stay away from using the original html repository, though.  He comes back to that later, and it will be easier to follow along if you don't change it much.
 
-* If you really want to experiment with the collaboration parts of GitHub that you can't do alone, consider working with someone else in the class that you may know.  You can make each other collaborators on a repo and experiment with approval, branch protection, things like that.  I know that not everyone is comfortable doing this, so I'm going to try to figure out a better way to enable this practice.  We'll talk in class on Friday.  
+* If you really want to experiment with the collaboration parts of GitHub that you can't do alone, consider working with someone else in the class that you may know.  You can make each other collaborators on a repo and experiment with approval, branch protection, things like that.  I know that not everyone is comfortable doing this, so I'm going to try to figure out a better way to enable this practice.  
 
 
-Week three is where the Udemy course and the SciComp lectures will start to diverge, and it'll continue into week four.  I'll rely on Udemy to teach you more about GitHub tools and collaboration practices, while the SciComp live lectures will spend more time on advanced git concepts.  I'll pick out some topics to cover in detail, while others will fall into the "you should know that this exists" category.
+Week three is where the Udemy course and the SciComp lectures start to diverge.  In week 3 and 4, I'll rely on Udemy to teach you more about GitHub tools and collaboration practices, while the SciComp live lectures will spend more time on intermediate and advanced git concepts that the videos don't cover.  I'll pick out some topics to cover in detail, while others will fall into the "you should know that this exists" category that I will only cover briefly.
+
+
+Here's a link to the poll for class #2: https://docs.google.com/forms/d/e/1FAIpQLScQNrMscqIYzitdvTMdOd6FRXDtrEjLw-z940x63DEwOSjVjg/viewform?usp=sf_link
+
+Remember, the poll is anonymous.  Please only vote once.  I may display results of the multiple choice questions, but I will not distribute the short answers without paraphrasing or summarizing them.
 
 
 As always, speak up on Slack for whatever reason you like...
