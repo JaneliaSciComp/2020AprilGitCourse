@@ -1,3 +1,8 @@
 
 
-text/
+# ignore file
+notes/newNotes.txt
+
+
+# ignore txt files inside folder
+text/*.txt
