@@ -10,7 +10,6 @@
 - Terminal open, in repo dir
 
 ## opening notes
-- ask in chat if you have questions; less scrolling than raising hand in a large group
 - forgot to ask about Zoom meeting length last poll; will do this time
     + I agree that 60m is best, but there is _so much_ to cover...
     + I will try to structure the interactive sessions with less general/more optional topics last, and questions throughout, so people can leave early if they need to
@@ -49,6 +48,7 @@ Udemy 4: Working with Branches
     + not a license to be messy!  do not mix stuff that shouldn't be mixed!
     + if you're ignoring a lot of files, it's a bad sign (although admittedly some tools will require certain layouts that are not good choices)
     + remember, you commit .gitignore, so it should only be for things that other people have to worry about, too!
+    + edit it in Sublime merge, show "untracked files" change, and commit and push
 - he calls video 29 "Syncing Branches", and that's an important choice of words; git is not only about version control in one repository (which may have one or many contributors itself), but it's also about synchronizing changes among many repos
 - tracking remotes: most commonly, you're only tracking one remote and you never change it; but it can be done, if you want to (a) change from GitHub to Bitbucket, etc, or (b) grab changes from multiple sources (eg, multiple people who have forked a project)
 - remember git fetch to grab changes from remote if your client doesn't see them (more soon)
@@ -150,8 +150,12 @@ remotes & fetch/push/pull
     +  either way tells git what you did
 - likewise move/rename
     + git tracks content, not files...and rename doesn't change content
+        * corollary: you can't add/commit empty folders!
     + git knows this, but how that's displayed can be weird and confusing
+        * sometimes you need to force it to "follow history" to get history across moves/renames
     + use git mv (source file) (destination file) to do this
+    + question from Slack: collaborator renamed folder, then git pull leaves her with original name folder, but empty, and git status doesn't care?
+        * couldn't reproduce in limited testing; generally should work; you'll have to remove the folder manually; as long as it's empty and git status doesn't show it, you should be fine
 - demo this
 
 
@@ -210,3 +214,5 @@ remotes & fetch/push/pull
 
 
 ## Q&A
+
+
