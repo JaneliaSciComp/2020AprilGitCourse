@@ -171,6 +171,7 @@ remotes & fetch/push/pull
 
 
 ## git reset
+- **moved to week 3!**
 - this is a powerful and dangerous command; usually used for getting yourself out of trouble in your repo
 - we now have background to understand how it works
 - as we've seen, git checkout moves HEAD
