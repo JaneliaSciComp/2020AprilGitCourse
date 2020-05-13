@@ -1,5 +1,5 @@
 # Entree
-tacos
+triple tofu tacos
 
 # Side
 tomatoes
