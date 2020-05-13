@@ -7,10 +7,15 @@
 - iPad with lesson, next assignment notes
 - Sublime x 2 running
 - Terminal open, in repo dir
+- repo with merge conflict ready
+    + GUIs pointing to it
+- Safari open with
+    + all the workflow links
+
 
 ## summary/commentary
 Udemy 5: Merge Conflicts
-- merge conflicts are the price you pay for enabling collaboration
+- merge conflicts are the price you pay for enabling collaboration (including with yourself!)
 - respect but do not fear them; the benefit of branching outweighs the cost of merging
 - git status tells you what to do
 - GUIs!
@@ -30,7 +35,6 @@ Udemy 6: Collaboration in GitHub
 - issues and pull requests: this is the dialog between collaborators
     + in pull request, use fix/close/resolve #issue to auto close issue
     + there's a setting for automatically deleting branches after merge
-
 
 
 ## common workflows with branches
@@ -65,6 +69,7 @@ Udemy 6: Collaboration in GitHub
 ## merge conflict tools
 - GUIs much better with multiple files, multiple changes per file
 - need to set up a conflict, then compare
+    + merge branch new-chef into master; conflicts result (and non-conflicting changes)
     + in editor
     + Sublime Merge
     + Stuart likes kdiff3 because it shows you the two conflicting files, the resulting file, **and** the common ancestor
@@ -111,9 +116,22 @@ Udemy 6: Collaboration in GitHub
 
 
 ## git stash
-
-
-
+- git stash sets aside all changes to tracked files and all staged changes
+    + basically resets to HEAD
+    + does **not** affect untracked files!
+- git stash apply = apply changes to files, leave in stash
+- more commonly, git stash pop = apply changes, delete from stash
+- it is a stack!  repeated stash/stash pop work as expected
+- git stash show = shows the stack
+- more options
+- why?  the typical use (I find) is, "oops, I'm on the wrong branch"
+    + change tracked file
+    + wrong branch!  but "git checkout" won't let me swap branches
+    + git stash; git checkout my-branch; git stash pop
+    + (if it's a new branch, you can just create it then check it out)
+- but occasionally useful for getting changes out of git's way while it does other things
+    + I think IntelliJ uses it to do some trickery with its changelists?
+- demo this?
 
 
 ## next assignment
