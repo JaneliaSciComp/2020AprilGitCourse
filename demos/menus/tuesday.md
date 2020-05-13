@@ -1,8 +1,8 @@
 # Entree
-tacos
+turkey
 
 # Side
-tomatoes
+stuffing
 
 # Dessert
-tiramisu
+pumpkin pie
