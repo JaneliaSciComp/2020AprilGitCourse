@@ -22,9 +22,7 @@
 ## tips & miscellaneous
 
 
-## wrap-up
-
-- final survey
+# added some code after deleting a line
 
 
 
