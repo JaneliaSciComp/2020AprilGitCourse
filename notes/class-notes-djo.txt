@@ -510,9 +510,25 @@ Section 11: Intro to Continuous Integration and Delivery (45m)
     - entirely optional; I didn't do this section
     - I do know that Circle CI, for example, is a standard, widely-used tool
 - 68: What is Continuous Integration 
+    - mentions devops
+    - talks about software development in general
+    - product manager, product discovery
+    - quality and speed of delivery
+    - GH as hub for CI
+    - automated unit tests; code coverage
 - 69: What is Continuous Delivery 
+    - again the software engineering overview
+    - mentions big website deploying features zillions of times per day
 - 70: Using Circle CI from GitHub 
+    - circle CI from marketplace; free plan
+    - mentions travis CI
+    - setup a config yaml file and push to GH
+    - circle CI gates merge to master (with protected branch)
+    - didn't totally follow some of the later stuff
 - 71: Using App Center from GitHub 
+    - MS app center; again, free plan
+    - mobile app deployment (he's a xamarin dev)
+    - lots of setup and config
 
 Section 12: Extra Information - Source code, and other stuff
 - 72: Source Codes
