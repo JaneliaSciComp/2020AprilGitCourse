@@ -24,6 +24,8 @@
 
 # added some code after deleting a line
 
+# added some text after adding rules to the master and dev branches
+
 
 
 ## Q&A
