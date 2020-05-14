@@ -2,11 +2,11 @@ Hello everyone,
 
 The last assignment covers a lot of optional topics.  
 
-* Section 7 is worth watching; it covers working with open source projects in GitHub.  You should also follow along as best you can in one of you repos, although you will again have some trouble with experimenting with some of the collaboration tools.
+* Section 7 is worth watching; it covers working with open source projects in GitHub.  You should also follow along as best you can in one of you repos, although you will again have some trouble with experimenting with some of the collaboration tools with only one account.
 
-* Section 8 is about Markdown, which is the formatting language used throughout GitHub.  Watch it if you like, but I think for most people who do software development, all you need to do is search for "github markdown cheat sheet" and you will be able to understand it just by looking at a quick reference guide of some kind.
+* Section 8 is about Markdown, which is the formatting language used throughout GitHub.  Watch it if you like; it's a topic you should know.  However, Markdown is not very difficult to learn, for most people who do any kind of software development.  Probably, all you need to do is search for "github markdown", and you will be able to understand it just by looking at a quick reference guide or cheat sheet of some kind.
 
-* Section 9 is about GitHub pages, which is a way to serve simple web pages from a GitHub repository.  Most people will not need this, but it is short if it interests you.  GitHub repositories also have a wiki attached to them, and you might want to look into that tool instead or as well.  Typically GitHub Pages can be made prettier and are good for, eg, a project front page, or a developer portfolio page (which is what he does as an example).  A wiki is better for holding documentation, developer guides, things like that (things that don't need to be pretty but do need to be edited quickly or often.
+* Section 9 is about GitHub pages, which is a way to serve simple, easily formatted web pages from a GitHub repository.  Most people will not need this.  The videos are short, though, so watch if it interests you.  GitHub repositories also have a wiki attached to them, and you might want to look into that tool instead or as well.  Typically GitHub Pages can be made prettier and are good for, eg, a project front page, or a developer portfolio page (which is what Eduardo does as an example).  A wiki is better for holding documentation, developer guides, things like that (things that don't need to be pretty but do need to be edited quickly or often).
 
 * Section 10 is about IDE integration; either you're already watched the video you want or you haven't.  You can skip this
 
@@ -14,5 +14,8 @@ The last assignment covers a lot of optional topics.
 
 * Section 12 is very short and is mostly an advertisement about other courses in the series.  That being said, a lot of the suggested material is free, and the HHMI license might cover some of the paid courses.  Watch this if you're interested in more online software engineering courses.
 
-I will not spend much time on any of these topics in the Zoom meeting.  Instead, I will focus on the last set of intermediate topics that the videos do not cover.
+I will not spend much time on any of these topics in the Zoom meeting.  Instead, I will focus on some more intermediate topics that the videos do not cover.  Some topics I will cover in detail, while others I will mention and describe so you know they exist.
+
+
+Don
 
