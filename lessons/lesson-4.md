@@ -8,6 +8,7 @@
 - Sublime x 2 running
 - Terminal open, in repo dir
 
+
 ## summary/commentary
 - not much to talk about here
 Udemy 7: working with open-source project
@@ -46,27 +47,31 @@ Udemy 11: CI/CD
 
 ## rebase vs merge
 - git rebase = move or combine commits
+    + somewhat similar to merge
 - rollback commits in one location; move to new location; replay changes, forming new commits
 - generally used to keep commit history neat and linear
     + if you're working and you pull a lot, each pull gives you a little loop with a new commit
     + rebase = "just keep stacking my changes on top of everyone else's"; it's a ffwd merge (no loops, no new commits)
-- demo plain rebase then git pull --rebase
+- diagram plain rebase then git pull --rebase
 - can be used to clean up a string of commits before pushing
     + use interactive rebasing to squash = combine commits
     + makes a more concise commit history; easier for people to comprehend
     + not going to demo this
 - NEVER REBASE WHAT YOU'VE PUSHED!
     + seriously, never ever change anything you've pushed
-    + rebasing, resetting, amending = ways to rewrite history
+    + rebasing, resetting, amending = ways to rewrite history = be very careful
 - cherry pick
     + not a merge or rebase
     + duplicates commit to a new branch (but new hash!)
     + often used for hotfixing or moving small changes not worth a merge
-- advice:
-    + if you need to pull regularly while you're working to get new changes, especially from other parts of the code, probably git pull --rebase
+    + diagram this
+- when to use which?
+    + if you need to pull regularly while you're working to get new changes, especially from unrelated parts of the code, probably git pull --rebase
         * but beware: because no merge and thus no conflicts, your changes will always overwrite changes that were pulled!
+        * can be a problem when editing project-wide build-related files
     + if you're integrating feature branches, bigger chunks of work that might conflict with existing work, better to explicitly merge
         * this will let you check for and resolve conflicts
+        * but again be wary of non-conflicting wrongness
     + if you're contributing to a project, follow guidelines; they may require you to rebase and squash commits
     + cherry picking is only for moving very small pieces of code (eg, hotfixes moved from branch to master to deploy)
 
@@ -78,14 +83,12 @@ Udemy 11: CI/CD
 - CI/CD
 
 
-
 ## advanced topics/you should know this exists
 
 ### things you will probably need/use
 - demo all of these!
 - stage hunks (GUIs & git add -p)
-- git remote and get remote show origin 
-- search on "man git command"
+- git remote and git remote show origin 
 - DoI for GitHub repo
     + https://guides.github.com/activities/citable-code/
     + via Zenodo, open access organization from CERN
@@ -97,10 +100,14 @@ Udemy 11: CI/CD
 - git bisect
 - git-lfs for storing large binary files
 - git amend for rewriting commits, commit messages
-- git modules and subtrees
-
-
-
+- git submodules and subtrees
+    + repo within a repo
+    + can be hard to work with (but tools constantly improve)
+    + I have no experience with them, but:
+    + submodule points to a specific commit in another repo
+        * "easier to push, harder to pull"
+    + subtree is a copy that's pulled into your repo
+        * "easier to pull, harder to push"
 
 
 ## wrap-up
@@ -108,7 +115,8 @@ Udemy 11: CI/CD
     + you're going to screw up
     + but we (me, SciComp) can help if you do
     + #git-and-github channel for the Slack workspace?
-- want more?  check out Atlassian's git tutorial
+- want more?  check out Atlassian's git tutorial (on resources page)
+- big thanks to Caroline & Rob
 - video links and final survey out on Tuesday
     + your feedback is greatly appreciated; plus, you will be benefitting future class participants
 
