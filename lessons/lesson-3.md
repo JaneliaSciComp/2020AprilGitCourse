@@ -44,8 +44,8 @@ Udemy 6: Collaboration in GitHub
     + also includes tagging, to some extent
 - what to consider?
     + what are the roles you want to separate?  who makes decisions about the code?  who is allowed to commit or merge to master?  who needs approval, and how is that granted?
-    + how do you perform releases?  do you have alpha/beta/RC stages?  do you need to support old releases or can you always roll forward to the next release?  how quickly must you fix bugs (hotfixes?)?  do you practice CI/CD?
-    + how do you test and validate?  do you have explicit QA or beta testers?
+    + how do you perform releases?  do you have alpha/beta/RC stages?  do you need to support old releases or can you always roll forward to the next release?  how quickly must you fix bugs (hotfixes?)?  
+    + how do you test and validate?  do you have explicit QA or beta testers?  do you practice CI/CD?
     + do you need tool support?  there are eg macros/scripts/plugins that manage the branching in merging for some of these established workflows
 - these are the common ones I came across:
     + gitflow workflow (https://nvie.com/posts/a-successful-git-branching-model/): highly regimented dev/release stages; useful if you must support many releases; work on dev, release from master
@@ -53,27 +53,29 @@ Udemy 6: Collaboration in GitHub
     + Gitlab flow (https://about.gitlab.com/blog/2014/09/29/gitlab-flow/): somewhere between; work on master but have test/deploy branches; useful for staged deployment (eg ios app that needs approval)
     + forking workflow: open source typical; fork and work in own repo, pull request to source repo, which does gatekeeping
 - actual examples (show):
-    + JW: all trusted; feature branches for long-running work; we often commit to master; releases are done from a branch and tagged; even "hotfixes" are done with a new release from master (not from the release branch)
+    + JW: all trusted; feature branches for long-running work; we often commit to master; releases are done from a branch and tagged; "hotfixes" are done from master or the release branch
     + NeuTu: more open-source-like; Ting controls "master"; others work on branches and submit pull requests that he reviews and merges (even though I think I can commit to master...)
     + marktips: working alone, on master; tagged releases
-    + always respect the project guidelines (more next section)!
+    + always respect the project guidelines (more in upcoming Udemy section)!
         * Julia: https://github.com/JuliaLang/julia/blob/master/CONTRIBUTING.md#git-recommendations-for-pull-requests
         * React: https://github.com/facebook/react
         * CatMaid: https://github.com/catmaid/CATMAID/blob/master/CONTRIBUTING.md
 - what should you do?
     + respect existing project guidelines!
     + if alone: feature branches (yes!), release from master, with tags
-    + then add branches as your use case requires
+    + if open-source style collaboration, use forking workflow
+    + either way, add branches as your use case requires
 
 
 ## merge conflict tools
 - GUIs much better with multiple files, multiple changes per file
 - need to set up a conflict, then compare
-    + merge branch new-chef into master; conflicts result (and non-conflicting changes)
+    + merge branch new-chef into master; conflicts result (and non-conflicting changes, too!)
     + in editor
-    + Sublime Merge
-    + Stuart likes kdiff3 because it shows you the two conflicting files, the resulting file, **and** the common ancestor
-    + maybe the GitHub desktop tool?
+    + Sublime Merge; base/merge
+    + GitHub desktop tool doesn't have a built-in merge confict tool
+        * IntelliJ/PyCharm and others do
+    + Stuart likes kdiff3 because it shows you the two conflicting files, the resulting file, **and** the common ancestor (looks like a pain to config?)
 
 
 ## git reset
@@ -109,13 +111,15 @@ Udemy 6: Collaboration in GitHub
     + be really really careful
     + you can use branches (after the fact) to mitigate risk
 - git revert: more of an "inverse commit"; rather than back up, it moves forward, but it adds a new commit that undoes previous changes
-    + safer but messier?
+    + safer but messier
     + not sure I've ever used this or seen it used?
     + but it is appropriate to fix things after you've pushed
-- kind of don't want to demo, but I could...
 
 
 ## git stash
+- git is nosy and possessive; it wants to know everything that's going on in its directory (save the .gitignored stuff)
+- if you try to do some operations (especially checkout, which changes local files), it will complain if some local files are in an intermediate state
+    + eg, can't checkout a branch with untracked, changed, or staged (?) files
 - git stash sets aside all changes to tracked files and all staged changes
     + basically resets to HEAD
     + does **not** affect untracked files!
@@ -135,7 +139,7 @@ Udemy 6: Collaboration in GitHub
 
 
 ## next assignment
-- notes on upcoming optional stuff: what to do, ignore
+- next set of videos: only one must-watch; others optional
 - no poll this week or for week 4 (no one is responding)
 - there will be a final-final poll that I hope you will fill out
 
