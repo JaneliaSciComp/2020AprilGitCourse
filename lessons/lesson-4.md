@@ -7,6 +7,9 @@
 - iPad with lesson
 - Sublime x 2 running
 - Terminal open, in repo dir
+- Libre Office Draw with fresh copy of lesson 4 diagram
+- Safari open with
+    + class repo
 
 
 ## summary/commentary

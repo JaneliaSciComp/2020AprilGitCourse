@@ -9,29 +9,41 @@
 - Terminal open, in repo dir
 - repo with merge conflict ready
     + GUIs pointing to it
+- Libre Office Draw with fresh copy of lesson 3 diagram
 - Safari open with
-    + all the workflow links
+    + class repo
+    + workflow links
+    + project guidelines lines
 
 
 ## summary/commentary
 Udemy 5: Merge Conflicts
+- sounds like something you should have prevented, if you branched right/were organized/etc; they aren't
 - merge conflicts are the price you pay for enabling collaboration (including with yourself!)
 - respect but do not fear them; the benefit of branching outweighs the cost of merging
-- git status tells you what to do
+- as always, git status suggest what you might want to do
 - GUIs make it easier (the editor markers are a pain) (more later) 
 - add/commit to finish; default merge message
 - pull request = request to merge
     + I like his comment on pushback; the requester should work so the merge is clean
     + often that means merging master into your branch so your branch back into master is trivial
 - tags: use to mark a commit for all time 
+    + used to mark release or maybe a publication
+    + but if you do this all the time, maybe just record commit hash instead
 - the releases thing on GH is a GH-only thing, not git
+    + basically it adds the tag, then creates some archives
+    + if you tag and push tag, it happens automatically
+    + better to follow common practices for versioning (there's a link on GH; it's horribly officious, though)
 
 Udemy 6: Collaboration in GitHub
+- this is where the videos and my Zoom sessions start to diverge; I'm not going to say much about all the GH stuff Eduardo covers; I'll spend in-class time on git stuff he doesn't cover
 - not going to cover the colab stuff
 - protect branches
 - require reviews
 - issues and pull requests: this is the dialog between collaborators
-    + in pull request, use fix/close/resolve #issue to auto close issue
+    + opening issues for anything significant, even if you're the only one doing it, is worthwhile; it's a form of documentation
+        * we also have JIRA internally
+    + in pull request, use words "fix/close/resolve #issue" to auto close issue on PR merge
     + there's a setting for automatically deleting branches after merge
 
 
@@ -39,30 +51,30 @@ Udemy 6: Collaboration in GitHub
 - there are many branching and merging schemes
     + which to use depends on what you want out of it
     + having something is better than nothing
-    + also includes tagging, to some extent
+    + also includes tagging
     + actual examples will follow the generic discussion
 - what to consider?
-    + what are the roles you want to separate?  who makes decisions about the code?  who is allowed to commit or merge to master?  who needs approval, and how is that granted?
-    + how do you perform releases?  do you have alpha/beta/RC stages?  do you need to support old releases or can you always roll forward to the next release?  how quickly must you fix bugs (hotfixes?)?  
-    + how do you test and validate?  do you have explicit QA or beta testers?  do you practice CI/CD?
-    + do you need tool support?  there are eg macros/scripts/plugins that manage the branching in merging for some of these established workflows
+    + what are the roles you want to separate?  who works on what features/bugs/etc.?  who makes decisions about the code?  who is allowed to commit or merge to master?  who needs approval, and how is that granted?  
+    + how do you perform releases, and how frequently?  do you need to support old releases or can you always have users update to the next release?  how quickly must you fix bugs (hotfixes?)?  do you have explicit alpha/beta/RC stages?  
+    + how do you test, validate, deploy?  do you have explicit QA or beta testers, or automated testing?  do people download from GH or is there a build/deploy phase?  do releases involve a lot of infrastructure (eg, multiple clients and servers updating together)?  do you practice CI/CD?  are releases performed by a different team?
+    + do you need tool support?  there are eg macros/scripts/plugins that manage the branching in merging for some of these established and more complicated workflows
 - these are the common ones I came across:
     + gitflow workflow (https://nvie.com/posts/a-successful-git-branching-model/): highly regimented dev/release stages; useful if you must support many releases; work on dev, release from master
     + GitHub flow (https://guides.github.com/introduction/flow/) = feature branch; test and release from branch before merging to master; designed for SaaS (eg web app) that is released frequently, only one version
     + Gitlab flow (https://about.gitlab.com/blog/2014/09/29/gitlab-flow/): work on master but have test/deploy branches; useful for staged deployment (eg ios app that needs approval)
     + forking workflow: open source typical; fork and work in own repo, pull request to source repo, which does gatekeeping on merges
 - examples (show):
-    + JW: all trusted; feature branches for long-running work; we often commit to master; releases are done from master and tagged (used to use branches); "hotfixes" are done from master (used to be from release branch)
-    + NeuTu: more open-source-like; Ting controls "master"; others work on branches and submit pull requests that he reviews and merges (even though I think I can commit to master...)
+    + JW: all trusted; feature branches for long-running work; we often commit to master (no pull requests); releases are done from master and tagged (used to use branches); "hotfixes" are done from master (used to be from release branch); we run CI (build/test on every commit, email if fails); deployment is via Docker swarm of containers + client download/update (all manual); we use JIRA for issues
+    + NeuTu: more open-source-like; Ting controls "master"; others work on branches and submit pull requests that he reviews and merges (even though I think I can commit to master...); multiple branches for feature testing; no CI/CD (I think); lots of issues and pull requests in GH
     + marktips: working alone, on master; tagged releases
     + always respect the project guidelines (more in upcoming Udemy section)!
         * Julia: https://github.com/JuliaLang/julia/blob/master/CONTRIBUTING.md#git-recommendations-for-pull-requests
         * CatMaid: https://github.com/catmaid/CATMAID/blob/master/CONTRIBUTING.md
 - what should you do?
     + respect existing project guidelines!
-    + if alone: feature branches (yes, even alone!), release from master, with tags
+    + if alone: feature branches (yes, even alone!), release from master, with tags (esp. if your code is used by a few others)
     + if open-source style collaboration, use forking workflow
-    + in a lab group, with multiple people committing, probably master/dev/features, maybe with release branches depending on your user base
+    + in a lab group, with multiple people committing and/or using, probably master/dev/features, maybe with release branches depending on your user base
     + either way, add branches as your use case requires
 
 
@@ -73,8 +85,10 @@ Udemy 6: Collaboration in GitHub
         * be aware of non-conflicting changes!  when they are "wrong", you'll get bitten
     + in editor
     + Sublime Merge; base/merge
-    + Stuart likes kdiff3 for similar reasons (shows you the two conflicting files, the resulting file, **and** the common ancestor) (but looks like a pain to config...)
+        * Stuart Berg likes kdiff3 for similar reasons (shows you the two conflicting files, the resulting file, **and** the common ancestor) (but looks like a pain to config...)
     + GitHub desktop tool doesn't have a built-in merge confict tool
+        * but you can configure one you like
+        * eg, FileMerge on MacOS (with dev tools/Xcode installed) 
         * IntelliJ/PyCharm and others do
 
 
