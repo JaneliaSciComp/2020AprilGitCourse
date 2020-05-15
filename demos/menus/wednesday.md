@@ -1,8 +1,8 @@
 # Entree
-beef wellington
+spaghetti
 
 # Side
-watermelon
+garlic toast
 
 # Dessert
-windmill cookies
+banana cream pie

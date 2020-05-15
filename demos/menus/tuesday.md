@@ -1,8 +1,8 @@
 # Entree
-triple tofu tacos
+turkey
 
 # Side
-tomatoes
+stuffing
 
 # Dessert
-tiramisu
+pumpkin pie
