@@ -60,7 +60,11 @@ Udemy 11: CI/CD
     + BUT: doesn't cause merge conflicts!  your branch always "wins" over master
 - diagram plain rebase then git pull --rebase
     + note that for pull --rebase, the two branches are the same, just one local and one remote
-- can be used to clean up a string of commits before pushing
+- demo git pull --rebase on commandline
+    + edit in GH first, then local
+    + show commit hash and history in GUI
+    + git pull --rebase and look at history/hash again
+- git rebase can be used to clean up a string of commits before pushing
     + use interactive rebasing to squash = combine commits
     + makes a more concise commit history; easier for people to comprehend
     + not going to demo this
@@ -86,10 +90,24 @@ Udemy 11: CI/CD
 
 
 ## other GitHub tools
-- markdown & pages (covered in video)
-- CI/CD (mentioned above) 
+- basically, the top tab bar
+- pages (covered in video)
 - GitHub wiki (mentioned above)
-- project
+- issue tracking (of course)
+    + you can turn off issue tracking and the wiki if you like
+- CI/CD (actions) (mentioned above) 
+- security scanning
+- insights (includes the graph)
+- project: 
+    + task workflows; agile/kanban stuff
+    + like Trello or JIRA (but far less customizable)
+    + issues, pull requests, notes
+    + to do/in progress/done states; assignees, milestones, labels
+    + automation; eg, new pull request > in progress; close issue > done
+    + wish I hadn't been so rushed, or I would've used this while planning course; I have a text file checklist with ~50 tasks I've tracked, with lists first/next/later/done
+    + process matters!  organization matters!
+- settings: anything permission related is here
+- gists: small text snippet to share with people (code fragments, small piece of data, etc.)
 - probably others lurking that I don't know about
 
 
@@ -97,7 +115,8 @@ Udemy 11: CI/CD
 
 ### things you will probably need/use
 - stage hunks (GUIs & git add -p) (demo)
-    + git unstage is strangely difficult on command line; need to carefully git reset --soft, probably
+    + changes need to be distant to be detected as separate hunks
+    + git unstage is strangely difficult on command line; need to carefully git reset HEAD (--soft or --mixed?)
 - git remote and git remote show origin (demo)
 - DoI for GitHub repo
     + https://guides.github.com/activities/citable-code/
@@ -122,13 +141,19 @@ Udemy 11: CI/CD
 
 
 ## wrap-up
+- end of the course!
+- hope it's helpful not just for technical details, but also for hints on how to improve the way you work; process and organization matters; part of being a professional is being able to complete work and deliver it; tools like git help you with that; organization and discipline is something you can learn
 - you've got to use it and practice or it'll never become natural
+    + start small; new/small project, trivial workflow; build from there
     + you're going to screw up
         * but we (me, SciComp) can advise you if you have problems
         * when we moved JW from svn, we had some really good messes to fix
         * remember don't push if you have problems!
+        * new branch where you are and commit to that
     + #git-github channel for the Slack workspace
-- want more?  check out Atlassian's git tutorial (on resources page)
+- want more?
+    + check out Atlassian's git tutorial (on resources page)
+    + more Udemy courses
 - big thanks to Caroline & Rob
 - last video links and final survey out on Tuesday
     + your feedback is greatly appreciated; plus, you will be benefitting future class participants
