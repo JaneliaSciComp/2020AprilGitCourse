@@ -7,7 +7,7 @@ It would be a great help to me and to SciComp if you could take a few minutes an
 Survey link: https://docs.google.com/forms/d/e/1FAIpQLSd00-4Jlahh4Dnuu5GyeZjESMr9UW5FHXYzvc11IgxehID7Zg/viewform?usp=sf_link
 
 
-Here's the week 4 video link and password.  Note that videos are expected to be available indefinitely.  All the video links are listed on the wiki page (see below).
+Here's the week 4 video link and password.  Note that videos are expected to be available indefinitely.  All the video links are listed on the wiki page (link below).
 
 Link:
 Password:
@@ -19,7 +19,7 @@ All of the following course resources should be available indefinitely:
 
 * Wiki page (has all video links) (must be on Janelia network): http://wiki.int.janelia.org/wiki/pages/viewpage.action?pageId=74137198
 
-* Slack: http://janelia-dev.slack.com, #git-github channel; the course channel will probably be archived at some point (it doesn't have a lot of content)
+* Slack: http://janelia-dev.slack.com, #git-github channel (click "+" by channels, then "browse channels" to join); the course channel will probably be archived at some point (it doesn't have a lot of content anyway)
 
 
 Thank you all for participating!
