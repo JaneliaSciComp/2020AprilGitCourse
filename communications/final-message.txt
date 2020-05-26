@@ -2,15 +2,15 @@ Hello everyone,
 
 "Source Control Using Git and GitHub" is now over.  I hope you found it useful.  
 
-It would be a great help to me and to SciComp if you could take a few minutes and fill out the final course survey.  This course has been an experiment, and we'd like to assess what worked and what didn't so we can plan possible future SciComp courses.  As with the initial survey, the responses are anonymous.  I will post the multiple choice results, but I will not post the short-answer results without rewording them.  And if you feel uncomfortable sending feedback to me (even anonymously), please send your thoughts to Konrad Rokicki, who is my manager (rokickik@janelia.hhmi.org).
+It would be a great help to me and to SciComp if you could take a few minutes and fill out the final course survey.  This course has been an experiment, and we'd like to assess what worked and what didn't so we can plan possible future SciComp courses.  As with the initial survey, the responses are anonymous.  I will probably post the multiple choice results in the course repo, but I will not post the short-answer results without rewording them.  And if you feel uncomfortable sending feedback to me (even anonymously), please send your thoughts to Konrad Rokicki, who is my manager (rokickik@janelia.hhmi.org).
 
 Survey link: https://docs.google.com/forms/d/e/1FAIpQLSd00-4Jlahh4Dnuu5GyeZjESMr9UW5FHXYzvc11IgxehID7Zg/viewform?usp=sf_link
 
 
-Here's the week 4 video link and password.  Note that videos are expected to be available indefinitely.  All the video links are listed on the wiki page (link below).
+Here's the week 4 video link and password.  Note that videos are expected to be available indefinitely.  All the video links are listed on the wiki page (link farther below).
 
-Link:
-Password:
+Link: https://hhmi.zoom.us/rec/share/tN52NJz032VIQs_HsB6Ha786Gqj4eaa8h3NK-KZZz09-UMGx0MwHwPZV6BGh0jRS
+Password: 1S$6^8fV
 
 
 All of the following course resources should be available indefinitely:
