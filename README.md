@@ -1,6 +1,6 @@
 # Source Control Using Git and GitHub
 
-This repository supports the "Source Control Using Git and GitHub" being taught at HHMI's Janelia Research Campus beginning in April 2020.
+This repository supports the "Source Control Using Git and GitHub" being taught at HHMI's Janelia Research Campus that was run in April-May 2020.
 
 # General info
 
@@ -23,7 +23,7 @@ This repository supports the "Source Control Using Git and GitHub" being taught 
 | Friday, May 8, 3:30 pm | SciComp Zoom meeting: assignment 2 due; assignment 3 given |
 | Friday, May 15, 3:30 pm | SciComp Zoom meeting: assignment 3 due; assignment 4 given |
 | Friday, May 22, 3:30 pm | SciComp Zoom meeting: assignment 4 due |
-| Tuesday, May 26 (probably)   | final questionnaire sent out |
+| Tuesday, May 26 | final questionnaire sent out |
 
 # Curriculum
 
