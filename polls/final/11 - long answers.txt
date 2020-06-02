@@ -1,0 +1,26 @@
+final poll - long answers
+-------------------------
+
+Here are some paraphrased and summarize responses from the final poll's long answer questions.
+
+
+Comments on Udemy part of the course:
+- more than one comment that the on-demand flexibility of the course was really good
+- would have been nice to have a simple repo with simple text files available to work with
+
+Comments on the Zoom part of the course:
+- webinar mode was awkward
+- having recordings is very good
+- diagrams should have been prepared before instead of done live
+- the level of interactivity was not great
+
+Other general course comments:
+- combination of Zoom and Udemy worked very well
+- the timing was good; if not staying at home, would be hard to devote that much time
+- Zoom moderators did a good job
+
+Future course requests:
+- intro to Python; also, Django (a Python web framework)
+- software design
+- data structure and algorithms
+- databases
